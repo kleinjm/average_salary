@@ -46,6 +46,7 @@ Some gems were added to the out-of-the-box gems that come with a new `Rails 4.2.
 5. `guard` - Personal preference for watching files and running tests.
 6. `webmock` - Stubbing API calls in tests.
 7. `database_cleaner` - Wiping the test DB after each test.
+8. `haml-rails` - HAML generator
 
 ### Additional Notes
 * The `EmployeeController` is lightweight and input data is validated. 
