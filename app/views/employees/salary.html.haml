@@ -1,7 +1,9 @@
 #salary-content
   .container.text-center
-    .form-container
-      %h1 Job Title
-      = simple_form_for :salary, url: salary_path, html: { class: "form-horizontal", id: "js-average-salary" } do |f|
-        = f.input :title, as: :string, input_html: { class: "js-focus" }, placeholder: "Ex. Teacher, Director", require: true
-        = f.button :submit, "Search"
+    .row
+      .col-md-6.col-md-offset-3
+        %h1 Job Title
+        = form_tag "/salary", method: :post, html: { class: "form-horizontal", id: "js-average-salary" } do
+          = text_field_tag :title, nil, placeholder: "Ex. Teacher, Director", class: "js-focus", require: true
+          = submit_tag "Search"
+        = @average_salary

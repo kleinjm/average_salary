@@ -1,9 +1,9 @@
-namespace :employees do
+namespace :employee_import do
 
   desc "Parse the json from the source into the db"
   task parse_json: :environment do
     begin
-      Employee.parse_json(ENV["REPORT_SOURCE"])
+      EmployeeImporter.parse_json("https://data.cityofboston.gov/resource/ntv7-hwjm.json") # TODO: Remove
     rescue Exception => e
       puts "Rake task failure: Unable to parse employees json. Error: #{e}"
     end

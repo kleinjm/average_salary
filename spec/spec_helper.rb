@@ -17,7 +17,12 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+ENV['RAILS_ENV'] ||= 'test'
+
 require File.expand_path("../../config/environment", __FILE__)
+
+# clean database after each run
+require 'database_cleaner'
 
 # include webmock for testing external services
 require 'webmock/rspec'

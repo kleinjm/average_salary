@@ -13,8 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Haml-rails provides Haml generators for Rails 4
 gem 'haml-rails', "~> 0.9"
-# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
-gem 'simple_form'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -43,10 +41,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   # a fixtures replacement with a straightforward definition syntax
   gem "factory_girl_rails", "~> 4.0"
-  # ensure a clean state during tests
-  gem 'database_cleaner'
-  # Library for stubbing and setting expectations on HTTP requests in Ruby
-  gem 'webmock'
 end
 
 group :development do
@@ -64,3 +58,9 @@ group :development do
    gem 'pry-nav'
 end
 
+group :test do
+  # Library for stubbing and setting expectations on HTTP requests in Ruby
+  gem 'webmock'
+  # ensure a clean state during tests
+  gem 'database_cleaner'
+end
