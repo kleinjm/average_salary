@@ -4,7 +4,6 @@ describe Employee do
 
   let(:employee){ create :employee }
 
-
   describe ".average_salary" do
 
     it "return message on no input" do
@@ -14,7 +13,7 @@ describe Employee do
     end
 
     it "returns message if job type not found" do
-      expect(Employee.average_salary("bad")).to eq ["Job title matching or similar to 'bad' not found", 0]
+      expect(Employee.average_salary("bad")).to eq ["No positions found matching or similar to 'bad'", 0]
     end
 
     it "returns an average with one record match" do
