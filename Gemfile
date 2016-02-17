@@ -11,6 +11,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+# Haml-rails provides Haml generators for Rails 4
+gem 'haml-rails', "~> 0.9"
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
+gem 'simple_form'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -35,6 +39,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # rspec-rails is a testing framework for Rails 3.x and 4.x.
+  gem 'rspec-rails', '~> 3.0'
+  # a fixtures replacement with a straightforward definition syntax
+  gem "factory_girl_rails", "~> 4.0"
+  # ensure a clean state during tests
+  gem 'database_cleaner'
+  # Library for stubbing and setting expectations on HTTP requests in Ruby
+  gem 'webmock'
 end
 
 group :development do
@@ -43,5 +55,12 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Guard automates various tasks by running custom rules whenever file or directories are modified.
+   gem 'guard'
+   gem "guard-rspec", require: false
+   # pry debugger for rails server and console
+   gem 'pry-rails'
+   gem 'pry-nav'
 end
 

@@ -1,0 +1,7 @@
+#salary-content
+  .container.text-center
+    .form-container
+      %h1 Job Title
+      = simple_form_for :salary, url: salary_path, html: { class: "form-horizontal", id: "js-average-salary" } do |f|
+        = f.input :title, as: :string, input_html: { class: "js-focus" }, placeholder: "Ex. Teacher, Director", require: true
+        = f.button :submit, "Search"
