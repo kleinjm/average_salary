@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Haml-rails provides Haml generators for Rails 4
 gem 'haml-rails', "~> 0.9"
+# a rails form builder that makes it super easy to integrate twitter bootstrap-style forms
+gem 'bootstrap_form'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -41,6 +43,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   # a fixtures replacement with a straightforward definition syntax
   gem "factory_girl_rails", "~> 4.0"
+   # pry debugger for rails server and console
+   gem 'pry-rails'
+   gem 'pry-nav'
 end
 
 group :development do
@@ -53,9 +58,6 @@ group :development do
   # Guard automates various tasks by running custom rules whenever file or directories are modified.
    gem 'guard'
    gem "guard-rspec", require: false
-   # pry debugger for rails server and console
-   gem 'pry-rails'
-   gem 'pry-nav'
 end
 
 group :test do

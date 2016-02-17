@@ -1,0 +1,16 @@
+- if @records_count
+  - if @records_count.zero?
+    .alert.alert-danger{:role => "alert"}
+      %h3.no-margin= @average_salary
+  - else
+    .alert.alert-success{:role => "alert"}
+      %h3.no-margin
+        The average salary for
+        %b= @records_count
+        = "position".pluralize(@record_count)
+        matching or similar to the title
+        %b= "'#{@title}'"
+        is
+        %br
+        %br
+        %b= number_to_currency(@average_salary)

@@ -1,7 +1,13 @@
 class EmployeesController < ApplicationController
 
   def salary
-    @average_salary = Employee.average_salary(query)
+    @title = query
+    @average_salary, @records_count = Employee.average_salary(@title) if @title
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @average_salary }
+    end
   end
 
   private

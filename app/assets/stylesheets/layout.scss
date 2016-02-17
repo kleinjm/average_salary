@@ -9,7 +9,20 @@ body{
   background-repeat: no-repeat; 
 }
 
-.form-container{
-  width: 50%;
+a{
+  color: #FFF !important;
+}
+
+.wrapper{
+  min-height: 100%;
+  height: auto !important; /* IE6 support */
+  height: 100%;
   margin: 0 auto;
 }
+.footer, .push{ height: 150px; }
+.footer{
+  background-color: #000;
+  color: #FFF;
+}
+
+.no-margin{ margin: 0; }

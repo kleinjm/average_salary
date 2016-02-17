@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Teikametrics
+    %title Average Salary
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -13,5 +13,8 @@
     / bootstrap minified JavaScript
     %script{:crossorigin => "anonymous", :integrity => "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
   %body
-    = render partial: "error_modal"
-    = yield
+    .wrapper
+      = render partial: "layouts/error_modal"
+      = yield
+      .push
+    = render partial: "layouts/footer"
