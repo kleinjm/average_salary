@@ -45,9 +45,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   # a fixtures replacement with a straightforward definition syntax
   gem "factory_girl_rails", "~> 4.0"
-   # pry debugger for rails server and console
-   gem 'pry-rails'
-   gem 'pry-nav'
+  # pry debugger for rails server and console
+  gem 'pry-rails'
+  gem 'pry-nav'
 end
 
 group :development do
@@ -58,8 +58,8 @@ group :development do
   gem 'spring'
 
   # Guard automates various tasks by running custom rules whenever file or directories are modified.
-   gem 'guard'
-   gem "guard-rspec", require: false
+  gem 'guard'
+  gem "guard-rspec", require: false
 end
 
 group :test do
