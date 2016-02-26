@@ -54,6 +54,6 @@ Some gems were added to the out-of-the-box gems that come with a new `Rails 4.2.
 * Each gem in the gemfile has a note explaining it.
 
 ### References
-[James M Klein](www.jamesmklein.com)
+[James M Klein](http://www.jamesmklein.com)
 
 [Resume](http://www.jamesmklein.com/James_Klein_Resume.pdf)
