@@ -7,6 +7,19 @@ describe EmployeeImporter do
       expect(EmployeeImporter.parse_json("")).to eq "Please provide a valid source"
     end
 
+    it "raises an error on bad JSON input source" do
+      expect{EmployeeImporter.parse_json("blah")}.to raise_error(RuntimeError)
+    end
+
+    it "cannot parse invalid record" do
+      stub_request(:get, /data.cityofboston.gov/).
+        to_return(status: 200, body: [{ total_earnings: 200.00 }].to_json, headers: { content_type: "application/json" })
+
+      expect{
+        EmployeeImporter.parse_json("https://data.cityofboston.gov/resource/ntv7-hwjm.json")
+        }.to change{Employee.count}.by(0)
+    end
+
     it "creates a record from valid data" do
       stub_request(:get, /data.cityofboston.gov/).
         to_return(status: 200, body: [{ title: "teacher", total_earnings: 200.00 }].to_json, headers: { content_type: "application/json" })
@@ -18,7 +31,7 @@ describe EmployeeImporter do
     end
 
     it "creates multiple valid records" do
-          stub_request(:get, /data.cityofboston.gov/).
+      stub_request(:get, /data.cityofboston.gov/).
         to_return(status: 200, headers: { content_type: "application/json" }, body: [
           { title: "teacher", total_earnings: 200.00 },
           { title: "director", total_earnings: 4000000 },
