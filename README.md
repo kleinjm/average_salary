@@ -2,7 +2,7 @@
 ### Description
 [Average Salary](https://average-salary.herokuapp.com) is an application that pulls employee data from the publicly available [Boston Employee Earnings Report](https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8) and calculates an average salary for a given job title.
 
-The search will match similar titles in the given `title` query while being case insensitive. I.e. `teacher` will match `Teacher`, `Teacher I, `Substitute Teacher`, etc.)
+The search will match similar titles in the given `title` query while being case insensitive. I.e. `teacher` will match `Teacher`, `Teacher I`, `Substitute Teacher`, etc.)
 
 ### Usage
 ##### JSON
